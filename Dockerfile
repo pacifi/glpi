@@ -15,7 +15,7 @@ RUN chmod -R 777 /var/www/glpi/
 RUN chown -R www-data:www-data /var/www/glpi/
 #RUN sudo a2enmod rewrite
 RUN apt install  libapache2-mod-php -y
-#RUN echo  /etc/php.ini | xargs sed -i "s/date.timezone =.*/date.timezone = America\/Lima/"
+RUN echo  /etc/php/7.4/fpm/php.ini | xargs sed -i "s/;date.timezone =.*/date.timezone = America\/Lima/"
 
 COPY glpi.conf /etc/apache2/
 #RUN cat /etc/apache2/glpi.conf > /etc/apache2/sites-available/default
