@@ -33,3 +33,6 @@ ENTRYPOINT /root/entrypoint.sh
 
 
 EXPOSE  80
+
+#* * * * * /usr/bin/php /var/www/glpi/front/cron.php --force  mailgate
+#* * * * * /usr/bin/php /var/www/glpi/front/cron.php --force  queuednotification
