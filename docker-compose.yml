@@ -3,6 +3,9 @@ version: '3.3'
 services:
   db:
     image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+
     restart: always
     container_name: glpi_db
     environment:
@@ -14,6 +17,8 @@ services:
   glpi:
     depends_on:
       - db
+    volumes:
+      - glpi_data:/var/www/glpi
     build:
       context: ./
       dockerfile: Dockerfile
@@ -22,4 +27,7 @@ services:
       - "8001:80"
     restart: always
      
+volumes:
+    db_data: {}
+    glpi_data: {}
 
