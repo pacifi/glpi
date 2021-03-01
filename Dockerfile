@@ -36,3 +36,4 @@ EXPOSE  80
 
 #* * * * * /usr/bin/php /var/www/glpi/front/cron.php --force  mailgate
 #* * * * * /usr/bin/php /var/www/glpi/front/cron.php --force  queuednotification
+#docker exec -i glpi /usr/bin/php /var/www/glpi/front/cron.php --force  mailgate
