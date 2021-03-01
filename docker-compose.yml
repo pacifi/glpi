@@ -18,7 +18,7 @@ services:
     depends_on:
       - db
     volumes:
-      - glpi_data:/var/www/glpi
+      - app_data:/var/www/glpi
     build:
       context: ./
       dockerfile: Dockerfile
@@ -29,5 +29,5 @@ services:
      
 volumes:
     db_data: {}
-    glpi_data: {}
+    app_data: {}
 
