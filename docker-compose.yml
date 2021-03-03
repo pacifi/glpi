@@ -13,6 +13,8 @@ services:
       MYSQL_DATABASE: glpi_db
       MYSQL_USER: glpi
       MYSQL_PASSWORD: 123456
+      TZ:America/Sofia
+
 
   glpi:
     depends_on:
