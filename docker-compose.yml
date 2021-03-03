@@ -13,7 +13,7 @@ services:
       MYSQL_DATABASE: glpi_db
       MYSQL_USER: glpi
       MYSQL_PASSWORD: 123456
-      TZ: America/Sofia
+      TZ: America/Lima
 
 
   glpi:
@@ -28,6 +28,9 @@ services:
     ports:
       - "8001:80"
     restart: always
+    environment:
+      TZ: America/Lima
+
      
 volumes:
     db_data: {}
